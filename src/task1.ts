@@ -4,8 +4,8 @@ const rl = readline.createInterface({
   input: process.stdin,
 });
 
-rl.on('line', (input: string) => {
-  const output: string = input.split('').reverse().join('');
+rl.on('line', (input: Buffer) => {
+  const output: string = input.toString().split('').reverse().join('');
 
   process.stdout.write(`${output}\n`);
 });

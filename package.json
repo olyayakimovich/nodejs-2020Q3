@@ -10,7 +10,8 @@
     "lint": "eslint --fix --format=pretty --ext .ts src/",
     "check": "run-s prettier lint",
     "build": "run-s clean check compile",
-    "task1": "nodemon src/task1.ts"
+    "task1": "nodemon src/task1.ts",
+    "task2": "nodemon src/task2.ts"
   },
   "author": "Olga Yakimovich",
   "license": "ISC",
