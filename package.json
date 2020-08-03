@@ -1,0 +1,37 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "node.js project",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "compile": "tsc",
+    "prettier": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint --fix --format=pretty --ext .ts src/",
+    "check": "run-s prettier lint",
+    "build": "run-s clean check compile",
+    "task1": "nodemon src/task1.ts"
+  },
+  "author": "Olga Yakimovich",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  }
+}
