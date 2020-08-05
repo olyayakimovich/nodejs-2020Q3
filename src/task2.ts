@@ -6,7 +6,7 @@ const readable = fs.createReadStream('csv/books.csv');
 
 const writable = fs.createWriteStream('csv/books.txt');
 
-pipeline(readable, csv(), writable, (err) => {
+pipeline(readable, csv({ ignoreColumns: /(Amount)/ }), writable, (err) => {
   if (err) console.error(`Saving failed: ${err}`);
   console.log('Saved successfully');
 });
